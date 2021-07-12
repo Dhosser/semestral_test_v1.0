@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>home</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'core/css/bootstrap.min.css' %}">
+
+    <script src={% static "core/js/bootstrap.min.js" %}> </script>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Listado de productos</h1>
+
+<br>
+
+<div class="row">
+        <table border="1" cellspacing="">
+
+            <tr><td>Id del producto</td><td>nombre del producto</td><td>color</td>
+            {% for i in producto %}
+            
+            <tr><td>{{i.idProducto}}</td><td>{{i.nombreProducto}}</td><td>{{i.color}}</td>
+
+            {% endfor %}
+
+        </table>
+    </div>
+</div>
+</body>
+
+</html>
